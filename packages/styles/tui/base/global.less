@@ -1,0 +1,42 @@
+@import './mixin.less';
+/**
+* Line
+*/
+@lineStyle: 0.5px solid #eee;
+
+/**
+* Border
+*/
+@borderColor: #eee;
+@borderRadius: 3px;
+@borderColorLight: rgba(60, 60, 60 0.26);
+
+@boxShadow: 0 3px 6px 0px rgba(0, 0, 0, .15);
+
+@dropdownZIndex: 1000;
+
+/**
+* font
+*/
+@fontSize: 16px;
+@fontColor: #383838;
+@fontItemColor: #565656;
+
+/**
+* 蒙层
+*/
+@overLayColor: rgba(255, 255, 255, 0.5);
+
+@ZIndex: 501;
+@ZIndex1000: 1001;
+
+/**
+* Cell  TODO 这个需要重新整理一下
+*/
+@cellHeight: 44px;
+@cellBackground:#FFFFFF;
+@cellFontSize: @fontSize;
+@cellPadV:10px;
+@cellPadH:15px;
+@cellPadding: @cellPadV @cellPadH;
+@cellLineHeight: unit((@cellHeight - 2 * @cellPadV) / @cellFontSize); // 高度为44px，减去上下padding的行高

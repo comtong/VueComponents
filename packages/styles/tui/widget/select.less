@@ -1,0 +1,65 @@
+@import "../base/global.less";
+
+.tui-select {
+  font-size: @fontSize;
+  color: @fontColor;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #fff;
+    border-bottom: 1px solid @borderColorLight;
+    border-radius: @borderRadius;
+    padding: 0 15px;
+    z-index: 1000;
+    padding: @cellPadV @cellPadH;
+    .input {
+      width: 100%;
+      background-color: transparent;
+      font-size: @cellFontSize;
+      line-height: @cellLineHeight;
+    }
+  }
+  .tui-select-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    background: @overLayColor;
+    .tui-select-popup_container {
+      position: absolute;
+      top: 50%;
+      width: calc(100% - 30px);
+      transform: translate(15px, -50%);
+      background-color: white;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      border-radius: 4px;
+      .tui-select-popup_title {
+        margin-left: 12px;
+        font-size: 18px;
+        color: @fontColor;
+      }
+      .tui-select-popup_item {
+        margin-right: 12px;
+        margin-left: 12px;
+        display: flex;
+        color: @fontItemColor;
+        justify-content: space-between;
+      }
+      .tui-select-popup_item:nth-child(n+2) {
+        margin-top: 12px;
+      }
+    }
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}

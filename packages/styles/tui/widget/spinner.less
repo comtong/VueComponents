@@ -1,0 +1,53 @@
+@import "../base/global.less";
+
+.tui-spinner {
+  font-size: @fontSize;
+  color: @fontColor;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #fff;
+    border-bottom: 1px solid @borderColorLight;
+    border-radius: @borderRadius;
+    padding: 0 15px;
+    z-index: 1000;
+    .input {
+      width: 100%;
+      background-color: transparent;
+      font-size: @cellFontSize;
+      line-height: @cellLineHeight;
+    }
+  }
+  .choose-menu {
+    display: block;
+    background: #f8f8f8;
+    border: 1px solid @borderColorLight;
+    margin-block-start: -1px;
+    padding-inline-start: 0;
+    list-style: none;
+    border-top-style: none;
+    border-radius: 0 0 @borderRadius @borderRadius;
+    box-shadow: @boxShadow;
+    z-index: @dropdownZIndex;
+    .choose-item{
+      display: block;
+      padding: 3px 15px;
+      clear: both;
+      color: #333;
+      white-space: nowrap;
+    }
+    .choose-item:hover {
+      cursor: pointer;
+      background-color: #5897fb;
+    }
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}

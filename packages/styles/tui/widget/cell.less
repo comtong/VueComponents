@@ -1,0 +1,30 @@
+@import "../base/global.less";
+
+.tui-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: @cellFontSize;
+  padding: @cellPadV @cellPadH;
+  background-color: @cellBackground;
+  line-height: @cellLineHeight;
+  color: @fontColor;
+  
+  .tui-cell_title {
+    width: 9em; // 这里最多6个字试了下居然要写9em才行
+    margin-right: 20px;
+  }
+  .tui-cell-icon {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
+.tui-cell_line {
+  &:after {
+    .setBottomLine(#eee);
+    left: @cellPadH;
+    right: @cellPadH;
+  }
+}
